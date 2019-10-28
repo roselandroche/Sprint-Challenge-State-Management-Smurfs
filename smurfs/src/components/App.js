@@ -10,13 +10,13 @@ function App(props) {
     props.getSmurf();
   }, [])
 
-  console.log(props.smurf)
-  
+  console.log(props)
+
   return (
     <div className="App">
       <h1>SMURFS! 2.0 W/ Redux</h1>
       {/* {props.smurf.map(item => {
-        return item
+        return <SmurfDisplay />
       })} */}
     </div>
   );

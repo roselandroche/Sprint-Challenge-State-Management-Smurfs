@@ -6,7 +6,7 @@ const initialState = {
     smurf: []
 }
 
-export function smurfReducer(state = initialState, action) {
+export const smurfReducer = (state = initialState, action) => {
     switch(action.type) {
         case SMURF_START:
             return {
