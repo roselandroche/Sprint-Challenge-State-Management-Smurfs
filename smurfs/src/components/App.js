@@ -20,7 +20,7 @@ function App(props) {
 
 function mapStateToProps(state) {
   return {
-
+    
   }
 }
 

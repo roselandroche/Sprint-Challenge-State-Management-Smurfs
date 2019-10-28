@@ -4,9 +4,9 @@ const initialState = {
     isLoading: false,
     error: null,
     smurf: {
-        name: 'Brainey',
-        age: 200,
-        height: '5cm',
+        name: '',
+        age: null,
+        height: '',
         id: Date.now()
     }
     
@@ -26,7 +26,7 @@ export function smurfReducer(state = initialState, action) {
                 ...state,
                 isLoading: false,
                 error: null,
-                smurf: action.payload
+                smurf: [action.payload]
             }
         case SMURF_FAILURE:
             return {
