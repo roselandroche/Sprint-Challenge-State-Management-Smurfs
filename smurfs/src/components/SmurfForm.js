@@ -9,7 +9,11 @@ function SmurfForm(props) {
 
     const handleSubmit = event => {
         event.preventDefault();
-        props.addSmurf()
+        props.addSmurf({
+            name: smurfName,
+            age: smurfAge,
+            height: smurfHeight
+        })
 
         addSmurfName('')
         addSmurfAge('')
