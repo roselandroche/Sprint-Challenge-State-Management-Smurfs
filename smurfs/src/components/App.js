@@ -3,6 +3,7 @@ import "./App.css";
 import { connect } from "react-redux";
 import SmurfDisplay from './SmurfDisplay';
 import { getSmurf } from '../actions/smurf';
+import SmurfForm from './SmurfForm';
 
 function App(props) {
 
@@ -18,6 +19,7 @@ function App(props) {
       {props.smurf.map(item => {
         return <SmurfDisplay item={item}/>
       })}
+      <SmurfForm />
     </div>
   );
 }
