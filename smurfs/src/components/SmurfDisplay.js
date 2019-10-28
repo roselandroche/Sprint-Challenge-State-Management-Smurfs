@@ -1,6 +1,8 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-function SmurfDisplay() {
+function SmurfDisplay(props) {
+    console.log(props)
     return (
         <div className='smurf-box'>
             <h3>{props.name}</h3>
