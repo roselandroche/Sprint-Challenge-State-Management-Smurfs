@@ -15,16 +15,16 @@ function App(props) {
   return (
     <div className="App">
       <h1>SMURFS! 2.0 W/ Redux</h1>
-      {/* {props.smurf.map(item => {
-        return <SmurfDisplay />
-      })} */}
+      {props.smurf.map(item => {
+        return <SmurfDisplay item={item}/>
+      })}
     </div>
   );
 }
 
 function mapStateToProps(state) {
   return {
-    smurf: state.smurf
+    smurf: state.smurfReducer.smurf
   }
 }
 

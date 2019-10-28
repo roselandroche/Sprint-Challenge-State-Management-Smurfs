@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function SmurfForm() {
-    const [smurf, addSmurf] = useState();
+    const [smurfName, addSmurfName] = useState();
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -13,7 +13,7 @@ function SmurfForm() {
                 className='smurfName'
                 type='text'
                 placeholder='Smurf Name'
-                value={smurf}
+                value={smurfName}
                 
                 />
         </form>
