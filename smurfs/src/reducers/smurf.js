@@ -3,13 +3,7 @@ import { SMURF_START, SMURF_SUCCESS, SMURF_FAILURE } from '../actions/smurf';
 const initialState = {
     isLoading: false,
     error: null,
-    smurf: {
-        name: '',
-        age: null,
-        height: '',
-        id: Date.now()
-    }
-    
+    smurf: []
 }
 
 export function smurfReducer(state = initialState, action) {
@@ -19,21 +13,21 @@ export function smurfReducer(state = initialState, action) {
                 ...state,
                 isLoading: true,
                 error: null,
-                smurf: {}
+                smurf: []
             }
         case SMURF_SUCCESS:
             return {
                 ...state,
                 isLoading: false,
                 error: null,
-                smurf: [action.payload]
+                smurf: action.payload
             }
         case SMURF_FAILURE:
             return {
                 ...state,
                 isLoading: false,
                 error: action.payload,
-                smurf: {}
+                smurf: []
             }
         default:
             return state;
